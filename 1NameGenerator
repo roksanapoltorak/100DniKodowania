@@ -1,0 +1,31 @@
+import random
+
+womensNames = ["Roksana", "Ela", "Anna", "Jadwiga", "Dorota"]
+mensNames = ["Tomasz", "Ariel", "Marek", "Jakub", "Mateusz"]
+womensSurnames = ["Kowalska", "Bendkowska", "Zebrzycka", "Tylki", "Nowak"]
+mensSurnames = ["Polkowski", "Orlikowski", "Poziomski", "Bendkowski", "Cybulski"]
+
+wn = random.choice(womensNames)
+ws = random.choice(womensSurnames)
+mn = random.choice(mensNames)
+ms = random.choice(mensSurnames)
+
+
+def womenNameSurname():
+  return (wn + ' ' + ws)
+
+def menNameSurname():
+  return (mn + ' ' + ms)
+
+while True:
+  choice = raw_input('We want to generate name and surname. Please choice a sex. Female(F) or Male(M)?')
+  if choice == 'F' or choice == 'f':
+    print womenNameSurname()
+    break
+  elif choice == 'M' or choice == 'm':
+    print menNameSurname()
+    break
+  else:
+    print 'Please try again.Female(F) or Male(M)?'
+
+print choice()
