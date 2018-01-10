@@ -28,4 +28,4 @@ while True:
   else:
     print 'Please try again.Female(F) or Male(M)?'
 
-print choice()
+
