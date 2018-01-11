@@ -1,0 +1,16 @@
+import random
+
+list_of_numbers = range(501)
+lucky_number = random.choice(list_of_numbers)
+
+while True:
+  choice = int(input("Give me a lucky number from 0 to 500: "))
+  if (choice == lucky_number):
+    print ("Bingo!")
+  elif (choice > lucky_number):
+    print ("The lucky number is lower")
+  elif (choice < lucky_number):
+    print ("The lucky number is higher")
+  else:
+    print ('Try again')
+    
