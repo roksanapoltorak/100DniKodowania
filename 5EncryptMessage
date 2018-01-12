@@ -1,0 +1,17 @@
+def encrypt(text):
+    word = " "
+    for letter in text:
+        for i in "aeiouAEIOU":
+            if letter == i:
+                letter ="*"
+            else:
+                letter = letter
+        word = word + letter
+    return word
+    
+
+while True:
+  message = str(input("Enter the message which you want to encrypt: "))
+  print (encrypt(message))
+  
+
