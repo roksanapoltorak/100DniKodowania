@@ -1,0 +1,69 @@
+def FtoC(Ftemp):
+  Ctemp = (5/9) * (Ftemp - 32)
+  return Ctemp
+  
+def CtoF(Ctemp):
+  Ftemp = 32 + ((9/5) * Ctemp)
+  return Ftemp
+
+question1 = input("Let's convert temperature. If you want convert Fahrenheit to Celsius enter F. Or enter C if you want convert Celsius to Fahrenheit: ")
+
+  
+while question1 == "F" or question1 == "f":
+  question2 = int(input("Input temperature: "))
+  if (FtoC(question2)) < -273.15:
+    print ("Sorry, wrong number. Temperature is lower than absolute zero!")
+    break
+ 
+  elif (FtoC(question2) > -273.15) and (FtoC(question2) < 0):
+    print (FtoC(question2))
+    print ("Brr! It's cold. The temperature is below 0!")
+    break
+
+
+  elif (FtoC(question2) == 0):
+    print (FtoC(question2))
+    print ("It's freezing point.")
+    break
+
+  elif (FtoC(question2) == 100):
+    print (FtoC(question2))
+    print ("Wooah! It's boiling point!")
+    break
+
+  else:
+    print (FtoC(question2))
+    break
+
+while question1 == "C" or question1 == "c":
+  question2 = int(input("Input temperature: "))
+  if (CtoF(question2)) < -459.67:
+    print ("Sorry, wrong number. Temperature is lower than absolute zero!")
+    break
+ 
+  elif (CtoF(question2) > -459.67) and (FtoC(question2) < 32):
+    print (CtoF(question2))
+    print ("Brr! It's cold. The temperature is below 0!")
+    break
+
+
+  elif (CtoF(question2) == 32):
+    print (CtoF(question2))
+    print ("It's freezing point.")
+    break
+
+  elif (CtoF(question2) == 212):
+    print (CtoF(question2))
+    print ("Wooah! It's boiling point!")
+    break
+
+  else:
+    print (CtoF(question2))
+    break
+
+while (question1 != "F" or question1 != "f" or question1 != "C" or question1 != "c"):
+  print ("Try again!")
+  break
+
+  
+
