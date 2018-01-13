@@ -1,0 +1,13 @@
+list_of_numbers = range(1,101)
+
+def fizzbuzz(numbers):
+  for number in numbers:
+    if number % 3 == 0:
+      print ("fizz")
+    elif number % 5 == 0:
+      print ("buzz")
+    else:
+      print (number)
+
+print (fizzbuzz(list_of_numbers))
+
