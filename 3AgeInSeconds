@@ -1,0 +1,10 @@
+import datetime
+
+while True:
+  dateOfBirth = input("Enter your birthday (YYYY-MM-DD): ")
+  date = datetime.datetime.strptime(dateOfBirth, '%Y-%m-%d')
+
+  ageInSeconds = (datetime.datetime.now() - date).total_seconds()
+
+  print("Your age in seconds is ", ageInSeconds)
+  break
