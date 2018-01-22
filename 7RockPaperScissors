@@ -1,0 +1,50 @@
+import random
+
+rockpaperscissors = ["rock", "paper", "scissors"]
+
+howmany = int(input("How many times do you want to play?"))
+times = 0
+usersWinnings = 0
+computersWinnings = 0
+draw = 0
+
+while times < howmany:
+    choice = input("Let's play! For rock enter 1, for paper enter 2 and for scissors enter 3: ")
+    computer = random.choice(rockpaperscissors)
+    times += 1
+    if choice == "1" and computer == "rock":
+      print ("The computer chose " + computer + ". Remis")
+      draw += 1
+    elif choice == "1" and computer == "paper":
+      print ("The computer chose " + computer + ". Computer won!")
+      computersWinnings += 1
+    elif choice == "1" and computer == "scissors":
+      print ("The computer chose " + computer + ".You won!")
+      usersWinnings += 1
+    elif choice == "2" and computer == "paper":
+      print ("The computer chose " + computer + ". Remis")
+      draw += 1
+    elif choice == "2" and computer == "rock":
+      print ("The computer chose " + computer + ". You won!")
+      usersWinnings += 1
+    elif choice == "2" and computer == "scissors":
+      print ("The computer chose " + computer + ". Computer won!")
+      computersWinnings += 1
+    elif choice == "3" and computer == "scissors":
+      print ("The computer chose " + computer + ". Remis")
+      draw += 1
+    elif choice == "3" and computer == "paper":  
+      print ("The computer chose " + computer + ". You won!")  
+      usersWinnings += 1
+    elif choice == "3" and computer == "rock":
+      print ("The computer chose " + computer + ". Computer won!")
+      computersWinnings += 1
+    else:
+      print ("Enter 1, 2 or 3 ...")
+    
+print ("Your result: ")
+print (usersWinnings)
+print ("Computer's result: ")
+print (computersWinnings)
+print ("Draw: ")
+print (draw)
