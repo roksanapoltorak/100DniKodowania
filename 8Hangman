@@ -1,0 +1,127 @@
+class Hangman():
+  def __init__(self):
+  	print ("Welcome to the Hangman Game!")
+  	ask_1 = input("Do you want to play? Y/N")
+  		
+  	if ask_1 == 'Y' or ask_1 == 'y' :
+  		print ("Let's start!")
+  		self.hangmanGame()
+  	elif ask_1 == 'N'or ask_1 == 'n':
+  		print ("What a pity. Maybe another time.")
+  		exit()
+  	else:
+  		print ("Try again. Y or N: ")
+  		self.__init__()
+
+  def hangmanGame(self):
+  	guesses = 0
+  	used_letters = ""
+  	secret_word = "akwarium"
+  	completion = ["_", "_", "_", "_", "_","_", "_", "_"]
+  		
+  	while True:
+  		ask_2 = input("Guess a letter:")
+  
+  		if ask_2.lower() in secret_word:
+  			print ("Wow! You hit!")
+  			used_letters += ask_2.lower() + ","
+  			self.hangman_graphic(guesses)
+  			print ("Progress: " + self.progress_updater(ask_2, secret_word, completion))
+  			print ("Used letters: " + used_letters)
+  		elif ask_2.lower() not in secret_word and ask_2.lower() not in used_letters:
+  			guesses += 1
+  			print ("Oops... it was wrong guess..")
+  			used_letters += ask_2 + ","
+  			self.hangman_graphic(guesses)
+  			print ("Progress: " + "".join(completion))
+  		else:
+  			print ("Try again!")
+  
+  def hangman_graphic(self, guesses):
+  		if guesses == 0:
+  			print ("              ")
+  			print ("|             ")
+  			print ("|             ")
+  			print ("|             ")
+  			print ("|             ")
+  			print ("|             ")
+  		elif guesses == 1:
+  			print ("________      ")
+  			print ("|             ")
+  			print ("|             ")
+  			print ("|             ")
+  			print ("|             ")
+  			print ("|             ")
+  		elif guesses == 2:
+  			print ("________      ")
+  			print ("|      |      ")
+  			print ("|             ")
+  			print ("|             ")
+  			print ("|             ")
+  			print ("|             ")
+  		elif guesses == 3:
+  			print ("________      ")
+  			print ("|      |      ")
+  			print ("|      0      ")
+  			print ("|             ")
+  			print ("|             ")
+  			print ("|             ")
+  		elif guesses == 4:
+  			print ("________      ")
+  			print ("|      |      ")
+  			print ("|      0      ")
+  			print ("|     /       ")
+  			print ("|             ")
+  			print ("|             ")
+  		elif guesses == 5:
+  			print ("________      ")
+  			print ("|      |      ")
+  			print ("|      0      ")
+  			print ("|     /|      ")
+  			print ("|             ")
+  			print ("|             ")
+  		elif guesses == 6:
+  			print ("________      ")
+  			print ("|      |      ")
+  			print ("|      0      ")
+  			print ("|     /|\     ")
+  			print ("|             ")
+  			print ("|             ")
+  		elif guesses == 7:
+  			print ("________      ")
+  			print ("|      |      ")
+  			print ("|      0      ")
+  			print ("|     /|\     ")
+  			print ("|     /       ")
+  			print ("|             ")
+  		else:
+  			print ("________      ")
+  			print ("|      |      ")
+  			print ("|      0      ")
+  			print ("|     /|\     ")
+  			print ("|     / \     ")
+  			print ("|             ")
+  			print ("Game over")
+  			exit()
+  			
+  
+  			self.__init__()
+  
+  def progress_updater(self, ask_2, secret_word, completion):
+  		i = 0
+  		while i < len(secret_word):
+  			if ask_2.lower() == secret_word[i]:
+  				completion[i] = ask_2.lower()
+  				i += 1
+  			if completion[0] == secret_word[0] and completion[1] == secret_word[1] and completion[2] == secret_word[2] and completion[3] == secret_word[3] and completion[4] == secret_word[4] and completion[5] == secret_word[5] and completion[6] == secret_word[6] and completion[7] == secret_word[7]:
+  			  print ("YOU WON!")
+  			  print ("The secret word was:", secret_word)
+  			  exit()
+  			else:
+  				i += 1
+  
+  		return "".join(completion)
+  		
+      
+print (Hangman())
+
