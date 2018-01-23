@@ -26,7 +26,7 @@ class Hangman():
   			print ("Wow! You hit!")
   			used_letters += ask_2.lower() + ","
   			self.hangman_graphic(guesses)
-  			print ("Progress: " + self.progress_updater(ask_2, secret_word, completion))
+  			print ("Progress: " + self.updater(ask_2, secret_word, completion))
   			print ("Used letters: " + used_letters)
   		elif ask_2.lower() not in secret_word and ask_2.lower() not in used_letters:
   			guesses += 1
@@ -107,7 +107,7 @@ class Hangman():
   
   			self.__init__()
   
-  def progress_updater(self, ask_2, secret_word, completion):
+  def updater(self, ask_2, secret_word, completion):
   		i = 0
   		while i < len(secret_word):
   			if ask_2.lower() == secret_word[i]:
