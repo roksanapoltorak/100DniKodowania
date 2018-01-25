@@ -1,0 +1,39 @@
+print ("Hello! Let's calculate how deep is your love.  ")
+
+name_1 = input("Enter you name: ")
+name_2 = input("Enter your partner's name: ")
+
+def love_calculator(n1, n2):
+
+
+  
+  pkt = 0
+  vowels = "aeiouAEIOU"
+  love = "loveLOVE"
+    
+  if n1[0] == n2[0]:
+    pkt += 20
+  if n1[0] in vowels and n2[0] in vowels:
+    pkt += 10
+  if n1[0] not in vowels and n2[0] not in vowels:
+    pkt += 5
+  if len(n1) == len(n2):
+    pkt += 10
+  for c1 in n1:
+    for c2 in n2:
+      if c1 in love and c2 in love:
+        pkt += 1
+          
+  print ("Result: ", pkt)
+     
+  if pkt >= 40:
+    print ("It must be love! We envy but wish you happiness.")
+  elif pkt < 40 and pkt >= 20:
+    print ("Not bad. Your relationship is quite likely to succeed.")
+  else:
+    print ("Run away! And look for someone else...")
+      
+  print ("But remember! 'It is not enough to love, you still need to be able to take this love into the hands and move it through life.' ")
+    
+love_calculator(name_1, name_2)
+
