@@ -42,9 +42,6 @@ while times < howmany:
     else:
       print ("Enter 1, 2 or 3 ...")
     
-print ("Your result: ")
-print (usersWinnings)
-print ("Computer's result: ")
-print (computersWinnings)
-print ("Draws: ")
-print (draws)
+print ("Your result: ", usersWinnings)
+print ("Computer's result: ", computersWinnings)
+print ("Draws: ", draws)
