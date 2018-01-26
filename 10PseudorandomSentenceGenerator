@@ -1,0 +1,26 @@
+import random
+
+
+nouns_who = ['Wife','Children', 'Men', 'Home', 'Sandwich', 'Doctor', 'Baby', 'Office', 'Deer', 'Librarian', 'Woman', 'Dentist', 'Mailman',  'Fireperson', 'People', 'Nurse', 'Manager', 'Boss', 'Teacher', 'Child']
+verbs = ['adopted',	'cooked',	'cheat', 'pushed', 'employed', 'desired', 'expected', 'excused', 'instructed', 'listened', 'murdered', 'kissed', 'transported', 'packed', 'washed', 'helped', 'rescued', 'moved', 'fried', 'boiled']
+adjectives = ['beautiful', 'ugly', 'good', 'new',	'long',	'great',	'little',	'old',	'high',	'different',	'small',	'large',	'young',	'important',	'public',	'bad', 'ancient', 'clean', 'fat', 'naughty']
+nouns_what =['dog', 'cat', 'map', 'meat', 'food', 'bird', 'book', 'tv', 'fish', 'mobile phone', 'owl', 'goose', 'chicken', 'lamb', 'lamp', 'teeth', 'ball', 'potato', 'apple']
+
+random_1 = random.choice(nouns_who)
+random_2 = random.choice(verbs)
+random_3 = random.choice(adjectives)
+random_4 = random.choice(nouns_what)
+
+print ("Hi! Let's make senseless sentences.")
+
+def senseless_sentences():
+
+  ask = input("If you want to make sentence without any sense enter Y. Otherwise goodbye and have a nice day: ")
+  senseless_sentence = random_1 + ' ' + random_2 + ' ' + random_3 + ' ' + random_4 + '.'
+  if ask == 'Y' or ask == 'y':
+    print (senseless_sentence)
+  else:
+    print ("Bye bye!")
+      
+      
+senseless_sentences()
