@@ -4,9 +4,6 @@ name_1 = input("Enter you name: ")
 name_2 = input("Enter your partner's name: ")
 
 def love_calculator(n1, n2):
-
-
-  
   pkt = 0
   vowels = "aeiouAEIOU"
   love = "loveLOVE"
