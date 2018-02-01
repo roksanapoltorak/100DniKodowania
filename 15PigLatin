@@ -1,0 +1,17 @@
+
+print ('At the beginning: Pig Latin is a language game that children (and some adults) use to speak <<in code>>. Pig Latin words are formed by altering words in English.' )
+
+def pigLatin():
+  pig = 'ay'
+  word = input("Here’s how it works: First, pick any English word: ")
+  
+  while True:
+    pigword = word.lower()
+    if len(pigword) > 0 and pigword.isalpha():
+      print ("And our word in piglatin is: ", pigword[1:] + pigword[0] + pig)
+      break
+    else:
+      print ("This isn't a word... Try again.")
+    pigLatin()
+      
+pigLatin()
