@@ -1,0 +1,22 @@
+import random
+
+answers = ["Of course!", "Absolutely not!", "Better not tell you now.", "It`s certain.", "Without a doubt.", "My sources say 'NO'", "I don`t think so.", "Ask again later", "Maybe, the probability is quite high.", "Maybe, but the probability is quite low.", "Don`t count on it.", "Definietely YES!", "Definietely NOT!", "Forget about it.", "Prognosis is good.", "Very likely.", "It's impossible."]
+
+print ("*** Welcome to the world of magic ***")
+print ("Today you may find out about the future.")
+
+ask_1 = input("If you want to ask a question to a magic ball enter Y. If you are scared, maybe you will come back here later. So decision is: ")
+
+def Magic_ball():
+  if ask_1 == "Y" or ask_1 == "y":
+    ask_2 = input("Ask a question. But remember, be careful!")
+    if "?" in ask_2:
+      answer = random.choice(answers)
+      print (answer)
+    else:
+      print("It wasn't a question... Try again.")
+      Magic_ball()
+  else:
+    print ("Bye bye!")
+    
+Magic_ball()
