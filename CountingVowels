@@ -1,0 +1,14 @@
+vowels = "aeiouAEIOU"
+
+def countVowels():
+  word = input ("Enter a statement which I count vowels:")
+  total = 0
+  
+  for c in word:
+    if c in vowels:
+      total += 1
+      
+  print ("Number of vowels: ")
+  print (total)
+  
+countVowels()
