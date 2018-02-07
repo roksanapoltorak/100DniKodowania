@@ -1,0 +1,41 @@
+import random
+import time
+
+print ("Welcome to Haiku Generator. ")
+time.sleep(2)
+
+print ("What is it?")
+time.sleep(2)
+
+print ("A haiku in English is a very short poem in the English language, following to a greater or lesser extent the form and style of the Japanese haiku. \n A typical haiku is a three-line observation (format with 17 syllables arranged in a 5–7–5 pattern) about a fleeting moment involving nature.")
+time.sleep(8)
+
+print ("\n So let's generate a haiku!")
+time.sleep(2)
+
+print ("3")
+time.sleep(1)
+
+print ("2")
+time.sleep(1)
+
+print ("1")
+time.sleep(1)
+
+print (" \n ")
+
+first_line = ["Whitecaps on the bay", "An old silent pond...", "In the twilight rain", "From across the lake,", "Over the wintry", "I was in that fire,", "A misty morning -", "Water runs down stream.", "Watching the sunset", "Warm midnight falling.", "Swaying leaves on the trees,", "The pitter patter", "Peaceful sunny day"]
+second_line = ["A broken signboard banging", "A frog jumps into the pond,", "these brilliant-hued hibiscus -", "The room was dark and somber.", "Pumpkins in the air, while me", "Fish swimming with the current.", "my thoughts go to a calm place", "Stars shining, dancing brightly.", "warmer air, blooming flowers,", "Sound of the heavenly rain ", "Munching on watermelon"]
+third_line = ["In the April wind.", "splash! Silence again.", "A lovely sunset.", "with no leaves to blow.", "I sleep peacefully.", "Crunch on autumn leaves.", "Life moving along...", "I feel secure no...", "Peaceful all at once.", "springs finally here...", "Soft breeze hits my toes."]
+
+
+def haikuGenerator():
+  haiku_1 = random.choice(first_line) 
+  haiku_2 = random.choice(second_line) 
+  haiku_3 = random.choice(third_line)
+  
+  print (haiku_1)
+  print (haiku_2)
+  print (haiku_3)
+  
+haikuGenerator()
