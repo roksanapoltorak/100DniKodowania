@@ -1,0 +1,41 @@
+import time
+
+print ("Hello world!")
+time.sleep(1)
+
+print ("Today we will check if word is palindrom.")
+time.sleep(2)
+
+print ("\n")
+
+print ("What is 'palindrom'? Let me explain.")
+time.sleep(2)
+
+print ("\n")
+
+print ("Palindrom is a word, phrase, number or any other sequence of units which has the property of reading the same forwards as it does backwards, character for character, sometimes disregarding punctuation, capitalization and diacritics.")
+time.sleep(8)
+
+print ("\n")
+
+def checkingPalindrome():
+  text = input("Enter a word to check if it's palindrom: ")
+  text = text.lower()
+  text = text.replace(" ", "")
+  word = ''
+  
+  l = len(text) - 1
+
+  while l>= 0:
+    word = word + text[l]
+    l -= 1
+    
+  if word == text:
+    print ("Wow! This is palindrom! ")
+  else:
+    print("Unfortunately, this is not palindrom.")
+    print ("Maybe try again?")
+    checkingPalindrome()
+  
+checkingPalindrome()
+
