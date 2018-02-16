@@ -1,0 +1,74 @@
+import random
+import time
+
+print ("Hello!")
+time.sleep(1)
+
+print ("Today we will choose gift for very important people for You.")
+time.sleep(3)
+
+print ("At the beginning let's remind who very important people are :-)")
+time.sleep(3)
+ 
+vip_women = ["Mom", "Aunt A", "Granny", "Mother-in-law"]
+vip_men = ["Dad", "Brother", "Fiance", "Grandpa", "Father-in-law", "Brother-in-law J", "Brother-in-law M"]
+
+print ("Very important women: ")
+for element in vip_women:
+  print (element)
+time.sleep(3)
+
+print ("Very important men: ")
+for element in vip_men:
+  print (element)
+  
+time.sleep(3)
+
+small_gifts_for_women = ['Sunglasses Case', 'Colorful Paper Flower Bookmarks', 'Flower Pot', 'Tea Wreath', 'Personalized Coffee Mug', 'Bath Salts']
+normal_gifts_for_women = ['Cozy Chunky Blanket', 'Wood Burned Utensils', 'DIY Calendar', 'Book']
+big_gifts_for_women = ['Gold necklace', 'Gold earrings', 'Ring Holder', 'Gold bracelet', 'Silver necklace', 'Silver earrings', 'Silver bracelet', 'Elegant Watch']
+
+small_gifts_for_men = ['Personalized Coffee Mug', 'Cookies in a Jar', "Happy socks", "Keyring"]
+normal_gifts_for_men = ['Scarf', 'Book', 'DIY Calendar', ]
+big_gifts_for_men = ['Elegant Watch', 'Flyboarding Experience', 'Overnight Hotel for Two', 'Lamborghini Gallardo Driving']
+
+def pickingSomeone():
+  who = input("Enter person: ")
+  who = who.lower()
+  if who == 'mom' or who == 'aunt a' or who == 'granny' or who == 'mother-in-law':
+    giftSuggestionForWomen()
+  elif who == 'dad' or who == 'brother' or who == 'grandpa' or who == 'fiance' or who == "father-in-law" or who == "brother-in-low J" or who == "brother-in-low M":
+    giftSuggestionForMen()
+  else:
+    print ("Something went wrong... Try again.")
+    pickingSomeone()
+    
+def giftSuggestionForWomen():
+  gift = ''  
+  what = input("Now you have to choose how big gift you want to give. Small? Enter S. Normal? Enter N. And maybe big? I think you know which letter to enter. ")
+  if what == "S" or what == 's':
+    gift = random.choice(small_gifts_for_women)
+    print ("You should give: ", gift)
+  elif what == "N" or what == 'n':
+    gift = random.choice(normal_gifts_for_women)
+    print ("You should give: ", gift)
+  elif what == "B" or what == 'b':
+    gift = random.choice(big_gifts_for_women)
+    print ("You should give: ", gift)
+
+def giftSuggestionForMen():
+  gift = ''  
+  what = input("Now you have to choose how big gift you want to give. Small? Enter S. Normal? Enter N. And maybe big? I think you know which letter to enter. ")
+  if what == "S" or what == 's':
+    gift = random.choice(small_gifts_for_men)
+    print ("You should give: ", gift)
+  elif what == "N" or what == 'n':
+    gift = random.choice(normal_gifts_for_men)
+    print ("You should give: ", gift)
+  elif what == "B" or what == 'b':
+    gift = random.choice(big_gifts_for_men)
+    print ("You should give: ", gift)
+    
+pickingSomeone()
+
+  
