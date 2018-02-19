@@ -1,0 +1,12 @@
+text = input("We want to create an anagram so enter letters or numbers:  ")
+
+def createAnagram(text):
+    if len(text) <=1:
+        yield text
+    else:
+        for anagram in createAnagram(text[1:]):
+            for i in range(len(text)):
+                yield anagram[:i] + text[0:1] + anagram[i:]
+
+print ("List of anagrams:")
+print (list(createAnagram(text)))
