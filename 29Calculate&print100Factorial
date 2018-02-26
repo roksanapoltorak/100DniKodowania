@@ -1,0 +1,23 @@
+import time 
+
+print ("Hello world!")
+time.sleep(1)
+
+print ("Today we will calculate factorial of your number.")
+time.sleep(1)
+
+def factorial():
+  number = int(input("Enter a number: "))
+
+  if number == 0:
+    f = 0
+  else:
+    f = 1
+    n = range(1, number + 1)
+    for each in n:
+      f = f * each
+    print ("Factorial of your number is: ", f)
+    
+factorial()
+
+
