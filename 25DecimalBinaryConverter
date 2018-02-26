@@ -1,0 +1,26 @@
+
+print ("Today we will convert numbers in binary and decimal systems.")
+
+print("\n")
+
+number_1 = int(input("Enter a number which we calculate in binary system: "))
+
+def binary(number_1):
+
+   if number_1 >= 1:
+       binary(number_1//2)
+   print(number_1 % 2,end = '')
+
+
+binary(number_1)
+
+print("\n")
+
+number_2 = input("Enter a number in binary which we calculate in decimal system: ")
+
+def binaryToDecimal(numb):
+  
+  decimal = int(number_2, 2)
+  print (decimal)
+
+binaryToDecimal(number_2)
