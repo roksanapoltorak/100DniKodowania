@@ -1,0 +1,71 @@
+import time
+print ("* * *")
+print ("Welcome to the flower shop!")
+print ("* * *")
+print ("\n")
+time.sleep(2)
+
+occasion = ['anniversary', 'brithday', 'congratulations', 'funeral', 'name-day', 'wedding']
+sizes = ['small', 'normal', 'big', 'very big', 'huge']
+flowers = ['carnations', 'gerbera', 'gladiolus', 'iris', 'lilies', 'roses', 'tulips',]
+
+print ("Tell us what occasion is.")
+
+o = input('Enter a for anniversary, \n b for brithday,\n c for congratulations, \n f for funeral, \n n for name-day, \n w for wedding: ')
+o = o.lower()
+
+print ("\n")
+print ("How big bouquet do you need?")
+s = input("Enter s for small, \n n for normal, \n b for big, \n v for very big \n and h for huge: ")
+s = s.lower()
+
+print ("\n")
+print ("Maybe you know about favourite flowers? Tell us!")
+f = input('Enter c for carnations,  \n g for gerbera, \n gl for gladiolus, \n i for iris, \n l for lilies, \n r for roses \n and t for tulips: ')
+f = f.lower()
+
+
+def ordering():
+  bill_1 = 0
+  if o == 'a' or o == 'b' or o == 'w':
+    bill_1 += 8
+  elif o == 'c' or o == 'n':
+    bill_1 += 5
+  elif o == 'f':
+    bill_1 += 7
+  else:
+    print ("Bouquet will be universal.")
+    bill_1 += 5
+  
+  bill_2 = 0
+  if s == 's':
+    bill_2 += 1
+  elif s == 'n':
+    bill_2 += 2
+  elif s == 'b':
+    bill_2 += 3
+  elif s == 'v':
+    bill_2 += 4
+  elif s == 'h':
+    bill_2 += 5
+  else:
+    print ("If you don`t know how big bouquet you want - you must be undecided so bouquet will be normal. ")
+    bill_2 += 2
+
+  bill_3 = 0
+  if f == 'c' or f == 'g':
+    bill_3 += 5
+  elif f == 'gl' or f == 'i':
+    bill_3 += 8
+  elif f == 'l' or f == 'r':
+    bill_3 += 10
+  else:
+    print ("You left empty space for choosing flowers, so we chosen for you. Standard choose is roses.")
+    bill_3 += 10
+    
+    
+  print ("\n The cost of your bouquet will be: ")
+  print (bill_1 + bill_2 + bill_3, "$")
+  
+ordering()
+    
