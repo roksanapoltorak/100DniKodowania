@@ -1,0 +1,46 @@
+
+print("Options of calculator:")
+print("Enter 'A' to add two numbers.")
+print("Enter 'S' to subtract two numbers.")
+print("Enter 'M' to multiply two numbers.")
+print("Enter 'D' to divide two numbers.")
+print("Enter 'Q' to end the program.")
+   
+while True:
+   user_input = input("Your choice: ")
+   user_input.lower()
+
+   if user_input == "q":
+    print("Okay. Maybe later.")
+    break
+    
+   elif user_input == "a":
+      num1 = float(input("Enter a number: "))
+      num2 = float(input("Enter another number: "))
+      result = str(num1 + num2)
+      print("The result is " + result)
+      break
+      
+   elif user_input == "s":
+      num1 = float(input("Enter a number: "))
+      num2 = float(input("Enter another number: "))
+      result = str(num1 - num2)
+      print("The result is " + result)
+      break
+
+   elif user_input == "m":
+      num1 = float(input("Enter a number: "))
+      num2 = float(input("Enter another number: "))
+      result = str(num1 * num2)
+      print("The result is " + result)
+      break
+      
+   elif user_input == "d":
+      num1 = float(input("Enter a number: "))
+      num2 = float(input("Enter another number: "))
+      result = str(num1 / num2)
+      print("The result is " + result)
+      break
+     
+   else:
+      print("Oops. Something went wrong.")
