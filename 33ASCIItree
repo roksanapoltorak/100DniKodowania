@@ -1,0 +1,24 @@
+import time
+
+print("Hello world!")
+time.sleep(1)
+print("Today we will generate ASCII Tree!")
+time.sleep(2)
+print("You can choose a special characters: @, #, $, %, ^, &, *")
+time.sleep(3)
+
+special_characters = ("@#$%^&*")
+
+height = int(input("Enter a height of our tree: "))
+special_char = input("Enter a special character which you choose: ")
+
+def ascii_tree():
+  tree = ''
+  if special_char in special_characters:
+    for i in range(height):
+     tree += special_char
+     print((" " * (height-i+2)), tree + tree)
+  else:
+    print("Something went wrong...")
+
+ascii_tree()
