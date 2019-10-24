@@ -1,4 +1,4 @@
 # 100DniKodowania
 
 Programming Challenge
-Started Jan 2018
+Started Jan 29, 2018
